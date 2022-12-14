@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+mainClassName = 'Santa'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+javafx {
+    version = '15'
+    modules = [ 'javafx.graphics' ]
+}
+
+repositories {
+    mavenCentral()
+}

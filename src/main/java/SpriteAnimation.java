@@ -1,5 +1,3 @@
-package santa;
-
 import javafx.animation.Interpolator;
 import javafx.animation.Transition;
 import javafx.geometry.Rectangle2D;
@@ -19,8 +17,8 @@ public class SpriteAnimation extends Transition {
     private int lastIndex;
 
     public SpriteAnimation(
-            ImageView imageView, 
-            Duration duration, 
+            ImageView imageView,
+            Duration duration,
             int count,   int columns,
             int offsetX, int offsetY,
             int width,   int height) {

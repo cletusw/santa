@@ -1,5 +1,3 @@
-package santa;
-
 import javafx.animation.Animation;
 import javafx.animation.Interpolator;
 import javafx.animation.PathTransition;
@@ -34,12 +32,13 @@ public class Santa extends Application {
         final int OFFSET_Y = 0;
         final int WIDTH = 240;
         final int HEIGHT = 80;
-        
-        final double screenWidth = 2048;
-        final double screenHeight = 1080;
 
-        Image image = new Image("resources/santa-sprite.png", WIDTH * COLUMNS, HEIGHT, true, true);
-        ImageView imageView = new ImageView(image);        
+        Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
+        final double screenWidth = screenBounds.getWidth();
+        final double screenHeight = screenBounds.getHeight();
+
+        Image image = new Image("santa-sprite.png", WIDTH * COLUMNS, HEIGHT, true, true);
+        ImageView imageView = new ImageView(image);
         imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
         imageView.setScaleX(-1);
 
